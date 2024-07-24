@@ -1,0 +1,64 @@
+/* home.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.home-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.links a {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.links a:hover {
+    background-color: #0056b3;
+}
+
+
+.username {
+    text-align: center;
+    font-size: 24px;
+    display: inline-block;
+}
+.username span {
+    display: inline-block;
+}
+.username span:nth-child(1) { color: red; }
+.username span:nth-child(2) { color: orange; }
+.username span:nth-child(3) { color: #b52ab0; }
+.username span:nth-child(4) { color: rgb(4, 223, 4); }
+.username span:nth-child(5) { color: blue; }
+.username span:nth-child(6) { color: indigo; }
+.username span:nth-child(7) { color: violet; }
+/* Add more colors if the username is longer */
+
+
+.logout-button {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #dc3545;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.logout-button:hover {
+    background-color: #c82333;
+}

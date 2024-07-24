@@ -1,0 +1,80 @@
+/* checkin.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.checkin-container, .exercises-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.emoji-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Allow wrapping to prevent overflow */
+}
+
+.emoji-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin: 0 10px; /* Add some margin between emojis */
+}
+
+.emoji-item .emoji {
+    font-size: 50px;
+    z-index: 2; /* Ensure emoji is on top */
+    background-color: transparent;
+}
+
+.emoji-item .emoji-text {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.emoji-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px; /* Adjust size as needed */
+    height: 70px; /* Adjust size as needed */
+    background-color: transparent;
+    border-radius: 50%;
+    transform: translate(-50%, -72%);
+    z-index: 1; /* Ensure circle is behind emoji */
+}
+
+.emoji-item.selected::before {
+    background-color: rgb(27, 92, 255);
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%; /* Ensure full width of the container */
+}
+
+.home-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.home-icon {
+    color: blue;
+    font-size: 2em;
+    text-decoration: none;
+}
+

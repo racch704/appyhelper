@@ -1,0 +1,68 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.checkin-container, .exercises-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.emoji-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.emoji-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    cursor: pointer;
+    position: relative;
+}
+
+.emoji-item .emoji {
+    font-size: 50px;
+    z-index: 2; /* Ensure emoji is on top */
+    background-color: transparent;
+}
+
+.emoji-item .emoji-text {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.emoji-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px; /* Adjust size as needed */
+    height: 70px; /* Adjust size as needed */
+    background-color: transparent;
+    border-radius: 50%;
+    transform: translate(-50%, -73%);
+    z-index: 1; /* Ensure circle is behind emoji */
+}
+
+.emoji-item.selected::before {
+    background-color: blue;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%; /* Ensure full width of the container */
+}
